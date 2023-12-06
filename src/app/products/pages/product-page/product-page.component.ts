@@ -29,6 +29,8 @@ export class ProductPageComponent
 {
   public isProductVisible: boolean = false;
 
+  currentPrice: number = 10;
+
   constructor() {
     console.log('constructor...');
   }
@@ -57,5 +59,9 @@ export class ProductPageComponent
   }
   ngOnDestroy(): void {
     console.log('gOnDestroy 😀');
+  }
+
+  increasePrice() {
+    this.currentPrice++;
   }
 }
